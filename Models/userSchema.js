@@ -22,7 +22,19 @@ const userSchema=new mongoose.Schema({
     gender:{
         type:String,
         required:true
-    }
+    },
+    name:{
+        type:String
+    },
+    date:{
+        type:Date
+    },
+    number:{
+        type:Number
+    },
+    location:{
+        type:String
+    },
     
 
 })

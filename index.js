@@ -5,10 +5,14 @@ const cors=require('cors')
 const db=require('./DB/connection')
 const router=require('./Router/router')
 
+const appMiddleware = require('./Middlewares/appmiddle')
+
+
 const pfSever=express()
 
 pfSever.use(cors())
 pfSever.use(express.json())
+pfSever.use(appMiddleware)
 pfSever.use(router)
 
 const port=4000||process.env.port
