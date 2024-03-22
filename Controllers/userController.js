@@ -25,41 +25,7 @@ exports.register=async(req,res)=>{
    
 }
 
-// exports.login=async(req,res)=>{
-//     const {email,password}=req.body
 
-//     try{
-//         const user=await users.findOne({email,password})
-//         if(user){
-//             const token=jwt.sign({userId:user._id},"superkey2024")
-//             console.log(token);
-//             res.status(200).json({user,token})
-//         }
-//         else{
-            
-//             res.status(401).json('Invalid user')
-//         }
-//     }
-//     catch(err){
-//         res.status(500).json('Server error'+err.message)
-//     }
-   
-// }
-// exports.updateUser = async(req,res)=>{
-//     const {username,email,password,address,gender,name,date,number,location} = req.body
-//     const {uid} = req.params
-//     try{
-//         //find the particular book and update the book details then save to mongodb
-//         const updateUser = await users.findByIdAndUpdate({_id:uid},{username,email,password,address,gender,name,date,number,location})
-//         //to save the book details to mongodb
-//         await updateUser.save()
-//         //response send back to client
-//         res.status(200).json(updateUser)
-//     } 
-//     catch(err){
-//         res.status(401).json("Internal server error "+err.message)
-// }
-// }
 exports.login = async(req,res) => {
     const {username,password} = req.body
     try{
